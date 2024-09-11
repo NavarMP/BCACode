@@ -21,7 +21,7 @@ void main()
     printf("\n 3 - Top");
     printf("\n 4 - Empty");
     printf("\n 5 - Exit");
-    printf("\n 6 - Dipslay");
+    printf("\n 6 - Display");
     printf("\n 7 - Stack Count");
     printf("\n 8 - Destroy stack");
     create();
