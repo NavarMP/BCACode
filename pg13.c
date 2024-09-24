@@ -66,7 +66,7 @@ void display()
 {
     if(top>=0)
     {
-        printf("\n The elements in STACk\n");
+        printf("\n The elements in STACK\n");
         for(i=top;i>=0;i--)
             printf("\n%d",stack[i]);
         printf("\n Press Next Choice ");
