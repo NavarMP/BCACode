@@ -33,12 +33,10 @@ void enQueue(int value){
         printf("\nQueue is Full!!! Insertion is not possible!!!");
     else{
         if(front == -1)
-        {
             front = 0;
-            rear++;
-            queue[rear] = value;
-            printf("\nInsertion success!!!");
-        }
+        rear++;
+        queue[rear] = value;
+        printf("\nInsertion success!!!");
     }
 }
 void deQueue(){
