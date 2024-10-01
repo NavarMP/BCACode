@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 #include<conio.h>
 #define SIZE 10
 void enQueue(int);
@@ -32,21 +33,28 @@ void enQueue(int value){
         printf("\nQueue is Full!!! Insertion is not possible!!!");
     else{
         if(front == -1)
+        {
             front = 0;
             rear++;
             queue[rear] = value;
             printf("\nInsertion success!!!");
         }
+    }
 }
 void deQueue(){
-    if(front == rear)
-        printf("\nQueue is Empty!!! Deletion is not possible!!!");
-    else{
-        printf("\nDeleted : %d", queue[front]);
+    if(front == -1){
+        printf("\nQueue is Empty..");
+    }
+    else if(front==rear)
+    {
+        printf("Deleted :%d ", queue[front]);
+        front=rear=-1;
+    }
+    else
+    {
+        printf("Deleted:%d ",queue[front]);
         front++;
-        if(front == rear)
-            front = rear = -1;
-        }
+    }
 }
 void display()
 {
