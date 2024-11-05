@@ -5,7 +5,6 @@ struct SparseMatrix {
     int col;
     int value;
 };
-
 int main() {
     int matrix[10][10];
     struct SparseMatrix sparse[MAX];
