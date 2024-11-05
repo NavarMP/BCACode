@@ -17,7 +17,7 @@ struct Node* createLinkedList(int n) {
             head = newNode; 
         } else { 
             temp->next = newNode;
-                    } 
+            } 
         temp = newNode; 
     } 
     return head; 
@@ -59,4 +59,17 @@ void displayLinkedList(struct Node* head) {
         temp = temp->next; 
     } 
     printf("NULL\n"); 
+}
+int main() { 
+    int n, position; 
+    struct Node* head = NULL;
+    printf("Enter the number of nodes: "); 
+    scanf("%d", &n); 
+    head = createLinkedList(n); 
+    displayLinkedList(head); 
+    printf("Enter the position of the node to delete: "); 
+    scanf("%d", &position); 
+    head = deleteNode(head, position); 
+    displayLinkedList(head); 
+    return 0; 
 }
