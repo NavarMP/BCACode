@@ -1073,7 +1073,7 @@ JOIN citycompanies1 co ON w.companyname = co.companyname
 WHERE e.homecity = co.city;
 ```
 **Output:**
-No rows selected
+0 rows selected
 
 ```sql
 -- E) Find all employees who do not work in Wipro Corporation.
