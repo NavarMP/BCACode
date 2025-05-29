@@ -1163,7 +1163,7 @@ end;
 /
 ```
 **Output:**
-Function TAX created.
+Function TAX compiled.
 
 ```sql
 declare
