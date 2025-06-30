@@ -5,7 +5,15 @@ Here is the revised simulation with the corrected output messages.
 ---
 
 **Question 1: Customer Table**  
-Create a table customer (cust_no varchar (5), cust_name varchar (15), age number, phone varchar (10))
+Create a table customer (cust_no varchar (5), cust_name varchar (15), age number, phone varchar (10))  
+a) insert 5 records and display it  
+b) add new field d_birth with date datatype  
+c) create another table cust_phone with fields cust_name and phone from customer table  
+d) remove the field age  
+e) change the size of the cust_name to 25  
+f) delete all the records from the table  
+g) rename the table cutomer to cust  
+h) drop the table 
 
 **Table Schema: customer**
 (initially)
@@ -136,7 +144,12 @@ Table CUST dropped.
 ---
 
 **Question 2: Sales_man and Sales_order Tables**  
-Create a table sales_man ( salesman_no place, phone unique) Create table sales_order(order_no order_date not null salesman_no primary key primary key, s_name not null, foreign key references salesman_no in sales_man del_type values should be either P or F (check constraints) order_status values should be 'Inprocess','Fullfilled','Backorder', 'Cancelled' (check constraints)) 
+Create a table sales_man ( salesman_no place, phone unique) Create table sales_order(order_no order_date not null salesman_no primary key primary key, s_name not null, foreign key references salesman_no in sales_man del_type values should be either P or F (check constraints) order_status values should be 'Inprocess','Fullfilled','Backorder', 'Cancelled' (check constraints))  
+a) Insert few records in both tables  
+b) Delete primary key from sales_man table  
+c) Delete Foreign key and Check constraints from sales_order table  
+d) Add primary key in sales_man using ALTER TABLE  
+e) Add foreign key and CHECK constraints in sales_order table using ALTER TABLE  
 
 **Table Schema: sales_man**
 | Field Name  | Data Type   | Constraints                    |
@@ -243,7 +256,14 @@ Table SALES_ORDER altered.
 ---
 
 **Question 3: Hospital Table**  
-Create a table Hospital with the fields (doctorid,doctorname,department,qualification,experience). 
+Create a table Hospital with the fields (doctorid,doctorname,department,qualification,experience).  
+a) Insert 5 records  
+b) Display the details of Doctors  
+c) Display the details of doctors who have the qualification ‘MD’  
+d) Display all doctors who have more than 5 years experience but do not have the qualification ‘MD’  
+e) Display the doctors in ‘Skin’ department  
+f) update the experience of doctor with doctored=’D003’ to 5  
+g) Delete the doctor with DoctorID=’D005
 
 **Table Schema: hospital**
 | Field Name    | Data Type   | Constraints |
@@ -359,7 +379,12 @@ delete from hospital where doctor_id='D005';
 
 **Question 4: Bank Tables**  
 Create the following tables:
-Bank_customer (accno primary key, cust_name, place) Deposit (accno foreign key, deposit_no, damount) Loan (accno foreign key loan_no, Lamount) 
+Bank_customer (accno primary key, cust_name, place) Deposit (accno foreign key, deposit_no, damount) Loan (accno foreign key loan_no, Lamount)  
+a) Display the details of the customers  
+b) Display the customers along with deposit amount who have only deposit with the bank  
+c) Display the customers along with loan amount who have only loan with the bank  
+d) Display the customers they have both loan and deposit with the bank  
+e) Display the customer who have neither a loan nor a deposit with the bank 
 
 **Table Schema: Bank_customer**
 | Field Name | Data Type   | Constraints |
@@ -564,7 +589,15 @@ select bank_customer.cust_name from bank_customer inner join deposit on bank_cus
 ---
 
 **Question 5: Employee Table**  
-Create a table employee with fields (EmpID, EName, Salary, Department, and Age). Insert some records. Write SQL queries using aggregate functions and group by clause
+Create a table employee with fields (EmpID, EName, Salary, Department, and Age). Insert some records. Write SQL queries using aggregate functions and group by clause  
+A. Display the total number of employees.  
+B. Display the name and age of the oldest employee of each department.  
+C. Display the average age of employees of each department  
+D. Display departments and the average salaries  
+E. Display the lowest salary in employee table  
+F. Display the number of employees working in purchase department  
+G. Display the highest salary in sales department;  
+H. Display the difference between highest and lowest salary 
 
 **Table Schema: employee**
 | Field Name | Data Type   | Constraints |
@@ -694,6 +727,13 @@ select max(salary)-min(salary) "Difference in salary" from employee;
 
 **Question 6: Product Table**  
 Create a table product with the fields (Product_code primary key, Product_Name, Category, Quantity, Price).
+a. Display the records in the descending order of Product_Name  
+b. Display Product_Code, Product_Name with price between 20 and 50  
+c. Display the details of products which belongs to the categories of ‘bath soap’, ‘paste’, or ‘washing powder’  
+d. Display the products whose Quantity less than 100 or greater than 500  
+e. Display the products whose names starts with 's'  
+f. Display the products which not belongs to the category 'paste'  
+g. Display the products whose second letter is 'u' and belongs to the Category 'washing powder' 
 
 **Table Schema: product**
 | Field Name   | Data Type   | Constraints |
@@ -860,7 +900,16 @@ Table PRODUCT dropped.
 ---
 
 **Question 7: Employee Database (city versions)**  
-Consider the employee database given below. Give an expression in SQL for each of the following queries: EMPLOYEE (Employee-Name, City) WORKS (Employee-Name, Company-Name, Salary) COMPANY (Company-Name, City) MANAGES (Employee-Name, Manager-Name) 
+Consider the employee database given below. Give an expression in SQL for each of the following queries: EMPLOYEE (Employee-Name, City)  
+WORKS (Employee-Name, Company-Name, Salary)  
+COMPANY (Company-Name, City)  
+MANAGES (Employee-Name, Manager-Name)  
+A) Find the names of all employees who work in Infosys  
+B) Find the names and cities of residence of all employees who works in Wipro  
+C) Find the names, and cities of all employees who work in Infosys and earn more than Rs. 10,000.  
+D) Find the employees who live in the same cities as the companies for which they work.  
+E) Find all employees who do not work in Wipro Corporation.  
+F) Find the company that has the most employees. 
 
 **Table Schema: cityemployees1**
 | Field Name | Data Type   | Constraints |
@@ -1126,6 +1175,13 @@ WHERE num_employees = (SELECT MAX(num_employees) FROM CompanyEmployeeCounts);
 **Question 8: Supplier (PL/SQL)**
 
 Create table supplier(supcode,sname,city) Create table product (pcode,pname) Create table supl_product(supcode,pcode,qty)
+a) Get all pairs of supplier numbers such that the two suppliers are located in the same city.  
+b) Get supplier names for suppliers who supply product P2.  
+c) Get product numbers supplied by more than one supplier.  
+d) Get supplier numbers for suppliers who are located in the same city as supplier S1.  
+e) Get supplier names for suppliers who supply part P1.  
+f) Get the number of Suppliers, who are supplying at least one product.  
+g) For each product supplied, get the pcode. and the total quantity supplied for that part. 
 
 ---
 
