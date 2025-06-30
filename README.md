@@ -275,7 +275,8 @@ insert into hospital values('D002','B','skin','MD',5);
 1 row inserted.
 ```sql
 insert into hospital values('D003','C','ortho','MD',8);
-```**Output:**
+```
+**Output:**
 1 row inserted.
 ```sql
 insert into hospital values('D005','D','gync','MD',9);
@@ -350,7 +351,8 @@ update hospital set experience =5 where doctor_id='D005';
 ```sql
 -- g) Delete the doctor with DoctorID='D005'
 delete from hospital where doctor_id='D005';
-```**Output:**
+```
+**Output:**
 1 row deleted.
 
 ---
@@ -510,7 +512,7 @@ select * from loan;
 ```sql
 -- a) Display the details of the customers (covered by select * from bank_customer previously)
 
--- b) Display the customers along with deposit amount who have only deposit with the bank
+-- b) Display the customers along with deposit amount who have only deposit with the bank  
 select bank_customer.cust_name,deposit.damount from bank_customer inner join deposit on bank_customer.accno=deposit.accno;
 ```
 **Output:**
@@ -588,7 +590,8 @@ insert into employee values('E001','A',50000,'sales',30);
 1 row inserted.
 ```sql
 insert into employee values('E002','B',50002,'purchase',34);
-```**Output:**
+```
+**Output:**
 1 row inserted.
 ```sql
 insert into employee values('E003','C',50034,'purchase',39);
@@ -1010,7 +1013,8 @@ select * from citycompanies1;
 
 ```sql
 insert into cityymanages1 values('resmi','ram');
-```**Output:** 1 row inserted.
+```
+**Output:** 1 row inserted.
 ```sql
 insert into cityymanages1 values('shirin','sam');
 ```
