@@ -243,7 +243,8 @@ Table SALES_ORDER altered.
 ```sql
 -- d) Add primary key in sales_man using ALTER TABLE
 ALTER TABLE sales_man ADD PRIMARY KEY (salesman_no);
-```**Output:**
+```
+**Output:**
 Table SALES_MAN altered.
 
 ```sql
