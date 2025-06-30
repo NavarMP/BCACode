@@ -469,7 +469,8 @@ insert into deposit values(002,02,25000);
 insert into deposit values(003,103,50000);
 ```
 **Output:**
-1 row inserted.```sql
+1 row inserted.
+```sql
 insert into deposit values(004,104,40000);
 ```
 **Output:**
