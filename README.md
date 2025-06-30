@@ -1117,14 +1117,17 @@ WHERE num_employees = (SELECT MAX(num_employees) FROM CompanyEmployeeCounts);
 | Lenovo      |
 
 ---
+
 **Question 8: Supplier (PL/SQL)**
 
 Create table supplier(supcode,sname,city) Create table product (pcode,pname) Create table supl_product(supcode,pcode,qty)
+
 ---
 
 **Question 9: Salary Report (PL/SQL)**
 
-Prepare a salary report of the employees showing the details such as: EmpNo, Name, Basic Pay, DA, Gross Salary, PF, Net Salary, Annual Salary and Tax For this purpose, create a table named SALARIES having the following structure.  
+Prepare a salary report of the employees showing the details such as: EmpNo, Name, Basic Pay, DA, Gross Salary, PF, Net Salary, Annual Salary and Tax For this purpose, create a table named SALARIES having the following structure.
+
 | Field Name | Type | Width |
 | :--------- | :--- | :---- |
 | EmpNo | Character | 10    |
