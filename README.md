@@ -5,6 +5,15 @@ Here is the revised simulation with the corrected output messages.
 ---
 
 **Question 1: Customer Table**
+Create a table customer (cust_no varchar (5), cust_name varchar (15), age number, phone varchar (10))
+a. insert 5 records and display it
+b. add new field d_birth with date datatype
+c. create another table cust_phone with fields cust_name and phone from customer table
+d) remove the field age
+e) change the size of the cust_name to 25
+f) delete all the records from the table
+g) rename the table cutomer to cust
+h) drop the table 
 
 **Table Schema: customer**
 (initially)
