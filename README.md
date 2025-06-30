@@ -6,14 +6,6 @@ Here is the revised simulation with the corrected output messages.
 
 **Question 1: Customer Table**
 Create a table customer (cust_no varchar (5), cust_name varchar (15), age number, phone varchar (10))
-a. insert 5 records and display it
-b. add new field d_birth with date datatype
-c. create another table cust_phone with fields cust_name and phone from customer table
-d) remove the field age
-e) change the size of the cust_name to 25
-f) delete all the records from the table
-g) rename the table cutomer to cust
-h) drop the table 
 
 **Table Schema: customer**
 (initially)
@@ -144,6 +136,7 @@ Table CUST dropped.
 ---
 
 **Question 2: Sales_man and Sales_order Tables**
+Create a table sales_man ( salesman_no place, phone unique) Create table sales_order(order_no order_date not null salesman_no primary key primary key, s_name not null, foreign key references salesman_no in sales_man del_type values should be either P or F (check constraints) order_status values should be 'Inprocess','Fullfilled','Backorder', 'Cancelled' (check constraints)) 
 
 **Table Schema: sales_man**
 | Field Name  | Data Type   | Constraints                    |
@@ -250,6 +243,7 @@ Table SALES_ORDER altered.
 ---
 
 **Question 3: Hospital Table**
+Create a table Hospital with the fields (doctorid,doctorname,department,qualification,experience). 
 
 **Table Schema: hospital**
 | Field Name    | Data Type   | Constraints |
@@ -362,6 +356,8 @@ delete from hospital where doctor_id='D005';
 ---
 
 **Question 4: Bank Tables**
+Create the following tables:
+Bank_customer (accno primary key, cust_name, place) Deposit (accno foreign key, deposit_no, damount) Loan (accno foreign key loan_no, Lamount) 
 
 **Table Schema: Bank_customer**
 | Field Name | Data Type   | Constraints |
@@ -566,6 +562,7 @@ select bank_customer.cust_name from bank_customer inner join deposit on bank_cus
 ---
 
 **Question 5: Employee Table**
+Create a table employee with fields (EmpID, EName, Salary, Department, and Age). Insert some records. Write SQL queries using aggregate functions and group by clause
 
 **Table Schema: employee**
 | Field Name | Data Type   | Constraints |
@@ -692,6 +689,7 @@ select max(salary)-min(salary) "Difference in salary" from employee;
 ---
 
 **Question 6: Product Table**
+Create a table product with the fields (Product_code primary key, Product_Name, Category, Quantity, Price).
 
 **Table Schema: product**
 | Field Name   | Data Type   | Constraints |
@@ -858,6 +856,7 @@ Table PRODUCT dropped.
 ---
 
 **Question 7: Employee Database (city versions)**
+Consider the employee database given below. Give an expression in SQL for each of the following queries: EMPLOYEE (Employee-Name, City) WORKS (Employee-Name, Company-Name, Salary) COMPANY (Company-Name, City) MANAGES (Employee-Name, Manager-Name) 
 
 **Table Schema: cityemployees1**
 | Field Name | Data Type   | Constraints |
@@ -1118,8 +1117,14 @@ WHERE num_employees = (SELECT MAX(num_employees) FROM CompanyEmployeeCounts);
 | Lenovo      |
 
 ---
+**Question 8: Supplier (PL/SQL)**
+Create table supplier(supcode,sname,city) Create table product (pcode,pname) Create table supl_product(supcode,pcode,qty)
+---
 
 **Question 9: Salary Report (PL/SQL)**
+Prepare a salary report of the employees showing the details such as: EmpNo, Name, Basic Pay, DA, Gross Salary, PF, Net Salary, Annual Salary and Tax For this purpose, create a table named SALARIES having the following structure.
+Field Name Type EmpNo Width Character Name 10 Character Basic 20 Numeric 6 Enter the records of at least 10 employees. Use the following information for calculating the details for the report: DA is fixed as the 40% of the basic pay. PF is fixed as 10% of the basic pay. Gross Salary is (Basic Pay + DA). Net Salary is (Gross Salary – PF)
+Annual Salary is (12 * Net Salary) Tax is calculated using the following rules: If annual salary is less than 100000, No Tax If annual salary is greater than 100000 but less than or equal to 150000, then the tax is 10% of the excess over 100000. If annual salary is greater than 150000 but less than or equal to 250000, then the tax is 20% of the excess over 150000. If annual salary is greater than 250000, then the tax is 30% of the excess over 250000.
 
 **Table Schema: emp_salary**
 | Field Name  | Data Type | Constraints |
