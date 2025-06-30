@@ -606,7 +606,8 @@ insert into employee values('E004','D',54000,'sales',40);
 
 ```sql
 select * from employee;
-```**Output:**
+```
+**Output:**
 | EMPID | ENAME | SALARY | DEPARTMENT | AGE |
 | :---- | :---- | :----- | :--------- | :-: |
 | E001  | A     | 50000  | sales      | 30  |
