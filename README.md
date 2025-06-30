@@ -4,7 +4,7 @@ Here is the revised simulation with the corrected output messages.
 
 ---
 
-**Question 1: Customer Table**
+**Question 1: Customer Table**  
 Create a table customer (cust_no varchar (5), cust_name varchar (15), age number, phone varchar (10))
 
 **Table Schema: customer**
@@ -135,7 +135,7 @@ Table CUST dropped.
 
 ---
 
-**Question 2: Sales_man and Sales_order Tables**
+**Question 2: Sales_man and Sales_order Tables**  
 Create a table sales_man ( salesman_no place, phone unique) Create table sales_order(order_no order_date not null salesman_no primary key primary key, s_name not null, foreign key references salesman_no in sales_man del_type values should be either P or F (check constraints) order_status values should be 'Inprocess','Fullfilled','Backorder', 'Cancelled' (check constraints)) 
 
 **Table Schema: sales_man**
@@ -242,7 +242,7 @@ Table SALES_ORDER altered.
 
 ---
 
-**Question 3: Hospital Table**
+**Question 3: Hospital Table**  
 Create a table Hospital with the fields (doctorid,doctorname,department,qualification,experience). 
 
 **Table Schema: hospital**
@@ -355,7 +355,7 @@ delete from hospital where doctor_id='D005';
 
 ---
 
-**Question 4: Bank Tables**
+**Question 4: Bank Tables**  
 Create the following tables:
 Bank_customer (accno primary key, cust_name, place) Deposit (accno foreign key, deposit_no, damount) Loan (accno foreign key loan_no, Lamount) 
 
@@ -561,7 +561,7 @@ select bank_customer.cust_name from bank_customer inner join deposit on bank_cus
 
 ---
 
-**Question 5: Employee Table**
+**Question 5: Employee Table**  
 Create a table employee with fields (EmpID, EName, Salary, Department, and Age). Insert some records. Write SQL queries using aggregate functions and group by clause
 
 **Table Schema: employee**
@@ -688,7 +688,7 @@ select max(salary)-min(salary) "Difference in salary" from employee;
 
 ---
 
-**Question 6: Product Table**
+**Question 6: Product Table**  
 Create a table product with the fields (Product_code primary key, Product_Name, Category, Quantity, Price).
 
 **Table Schema: product**
@@ -855,7 +855,7 @@ Table PRODUCT dropped.
 
 ---
 
-**Question 7: Employee Database (city versions)**
+**Question 7: Employee Database (city versions)**  
 Consider the employee database given below. Give an expression in SQL for each of the following queries: EMPLOYEE (Employee-Name, City) WORKS (Employee-Name, Company-Name, Salary) COMPANY (Company-Name, City) MANAGES (Employee-Name, Manager-Name) 
 
 **Table Schema: cityemployees1**
@@ -1118,10 +1118,12 @@ WHERE num_employees = (SELECT MAX(num_employees) FROM CompanyEmployeeCounts);
 
 ---
 **Question 8: Supplier (PL/SQL)**
+
 Create table supplier(supcode,sname,city) Create table product (pcode,pname) Create table supl_product(supcode,pcode,qty)
 ---
 
 **Question 9: Salary Report (PL/SQL)**
+
 Prepare a salary report of the employees showing the details such as: EmpNo, Name, Basic Pay, DA, Gross Salary, PF, Net Salary, Annual Salary and Tax For this purpose, create a table named SALARIES having the following structure.
 Field Name Type EmpNo Width Character Name 10 Character Basic 20 Numeric 6 Enter the records of at least 10 employees. Use the following information for calculating the details for the report: DA is fixed as the 40% of the basic pay. PF is fixed as 10% of the basic pay. Gross Salary is (Basic Pay + DA). Net Salary is (Gross Salary – PF)
 Annual Salary is (12 * Net Salary) Tax is calculated using the following rules: If annual salary is less than 100000, No Tax If annual salary is greater than 100000 but less than or equal to 150000, then the tax is 10% of the excess over 100000. If annual salary is greater than 150000 but less than or equal to 250000, then the tax is 20% of the excess over 150000. If annual salary is greater than 250000, then the tax is 30% of the excess over 250000.
@@ -1226,6 +1228,16 @@ select * from emp_salary where emp_no = 12;
 ---
 
 **Question 10: Exam Result (PL/SQL)**
+
+Create table exam_result(rollno, avg_score, Grade)  
+insert 10 records.  
+Assign null values to the field grade.  
+Write Program block to update the grade field by using the following condition.  
+avg_score between 90 and 100 = A  
+avg_score 75 -89 = B  
+avg_score 60- 74 = C  
+avg_score 50 -59 = D  
+avg_score below 50 = F  
 
 **Table Schema: stud4**
 (after alter)
@@ -1332,6 +1344,8 @@ select regno, name, score1, score2, score3, score4, total, avg, grade from stud4
 
 **Question 11: Area of Circle (PL/SQL)**
 
+Write a program code to calculate the area of a circle for a value of radius varying from 3 to 7. Store the radius and the corresponding value of calculated area in an empty table named areas with field’s radius and area.  
+
 **Table Schema: area**
 | Field Name | Data Type   | Constraints |
 | :--------- | :---------- | :---------- |
@@ -1376,6 +1390,8 @@ select * from area;
 ---
 
 **Question 12: Electricity Bill (PL/SQL)**
+
+Write a program block to calculate the  electricity bill by accepting cust_no and units_consumed
 
 **Table Schema: elec_bill**
 | Field Name     | Data Type    | Constraints |
@@ -1481,6 +1497,8 @@ select * from elec_bill order by cust_no;
 
 **Question 13: Fibonacci Series (PL/SQL Procedure)**
 
+Create a procedure to print Fibonacci number up to a limit, limit is passed as an argument
+
 **Simulated Output:**
 
 ```sql
@@ -1537,6 +1555,8 @@ PL/SQL procedure successfully completed.
 
 **Question 14: Check Prime Number (SQL Query)**
 
+Create a function to check whether a given number is prime or not
+
 **Simulated Output:**
 
 ```sql
@@ -1574,6 +1594,8 @@ where b.is_prime='prime' and b.n!=1;
 ---
 
 **Question 15: Student Marks Count (PL/SQL Procedure)**
+
+create a table stud_mark(regno, sname  ,avg_mark) Insert few records  Write a procedure to display number of students got Distinction, first-class, second class, third class or failed (90-100 distinction, 75-89 firstclass 60-74 second class 50-59 Third class below 50 failed)
 
 **Table Schema: stud4** (Reusing from Q10, but with `grade VARCHAR2(15)`)
 
@@ -1701,6 +1723,8 @@ PL/SQL procedure successfully completed.
 ---
 
 **Question 18: Trigger**
+
+create table phonebook (pname, mobno)  Create a Trigger to insert the old records from the table phonebook to del_phonebook (pname, mobno, modfy_date) whenever a record is deleted or updated in the phonebook table. 
 
 **Table Schemas:**
 **phonebook:**
